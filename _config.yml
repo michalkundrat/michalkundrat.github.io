@@ -3,8 +3,8 @@ title: Michal Kundrát
 subtitle: Portfolio
 email: michallahcim01@gmail.com
 description: A personal website covering my programming and qualification portfolio.
-baseurl: # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+baseurl: "/home" # the subpath of your site, e.g. /blog
+url: "https://michalkundrat.github.io"
 author: Michal Kundrát
 street_address: 1234 Somewhere Road
 city: Ellesmere Port

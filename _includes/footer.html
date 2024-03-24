@@ -1,22 +1,45 @@
+<script>
+	function submitForm() {
+		var data = {
+			"name": document.getElementById('name').value,
+			"email": document.getElementById('email').value,
+			"message": document.getElementById('message').value
+		};
+
+		const url = "https://script.google.com/macros/s/AKfycbwkbNQRfi3H7-cqPQqklY5vb2PMEW7MgHYqn_mUDyUMHDZ3rTf-Abc8hMRncjQ1qhkj6g/exec";
+
+		fetch(url, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'text/plain;charset=utf-8',
+			},
+			body: JSON.stringify(data),
+		})
+		.then((res) => res.json())
+		.then((data) => console.log('data', data))
+		.catch((err) => console.log('err', err));
+	}
+</script>
+
 <!-- Contact -->
 <section id="contact">
 	<div class="inner">
 		<section>
-			<form action="https://formspree.io/{{ site.email }}" method="POST">
+			<form>
 				<div class="field half first">
-					<label for="name">Name</label>
+					<label id="name" for="name">Name</label>
 					<input type="text" name="name" id="name" />
 				</div>
-				<div class="field half">
+				<div id="email" class="field half">
 					<label for="email">Email</label>
 					<input type="text" name="_replyto" id="email" />
 				</div>
-				<div class="field">
+				<div id="message" class="field">
 					<label for="message">Message</label>
 					<textarea name="message" id="message" rows="6"></textarea>
 				</div>
 				<ul class="actions">
-					<li><input type="submit" value="Send Message" class="special" /></li>
+					<li><input type="submit" onclick="submitForm()" value="Send Message" class="special" /></li>
 					<li><input type="reset" value="Clear" /></li>
 				</ul>
 			</form>

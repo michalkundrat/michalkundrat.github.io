@@ -299,7 +299,7 @@ Finally, this is a <a href="#">link</a>.</p>
 	<li><span class="button disabled">Default</span></li>
 </ul>
 
-<!-- Form -->
+Form
 <h3>Form</h3>
 
 <form method="post" action="#">
