@@ -2,7 +2,7 @@
 layout: post
 title: Who I am
 description: More about me
-image: "assets/images/Slovak MiG-29s.jpg"
+image: assets/images/slovak_mig-29s.jpg
 nav-menu: true
 ---
 
